@@ -1,0 +1,46 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main(){
+
+	int op,a,b;
+	do {
+	cout << "MENU"<<endl;
+	for (int i = 0; i < 3; i++) {
+		cout << "opcion. " << i + 1<<endl;
+	}
+	cout << "salir. 0" << endl;
+	cin >> op;
+	switch (op) {
+	case 1:
+		cout << "suma";
+		cout << endl << "Ingrese primer valor: "; cin >> a;
+		cout << endl << "Ingrese segundo valor: "; cin >> b;
+		cout << "la suma es: " << a + b;
+		break;
+	case 2:
+		cout << endl << "numero pares";
+		cout << endl << "Escriba un numero: "; cin >> a;
+		if (a % 2 = 0)
+			cout << "es par";
+
+		else cout << "es impar";
+			break;
+	case 3:
+		cout << "ingrese numero: ";
+		cin >> a;
+		b = 1;
+		for (int i = 2; i <= a; i++){
+			b *= i;
+	}
+		cout << endl << "El factorial de " << a << " es " << b;
+		break;
+		case 0
+			cout << "END";
+	}
+
+	} while (op != 0);
+	return 0;
+}
