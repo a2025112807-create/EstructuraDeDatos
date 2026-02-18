@@ -1,0 +1,85 @@
+#include<iostream>
+
+using namespace std;
+
+int a = 0, b = 0;
+
+int suma(int a, int b);
+void par(int a);
+int facto(int a);
+double IVA(int a);
+
+int main() {
+	int a = 0, b = 0;
+	int op;
+	do {
+		cout << "MENU" << endl;
+		cout << "===========" << endl;
+		cout << "1. hacer una suma" << endl;
+		cout << "2. ver si un numero es par" << endl;
+		cout << "3. numero factorial" << endl;
+		cout << "4. calcular el IVA" << endl;
+		cout << "0. salir" << endl;
+		cin >> op;
+		switch (op) {
+		case 1:
+			cout << "suma" << endl;
+			cout << "ingrese el primer valor: " << endl;
+			cin >> a;
+			cout << "ingrese el sugundo valor: " << endl;
+			cin >> b;
+			suma(a, b);
+			break;
+		case 2:
+			cout << endl << "numero pares";
+			cout << endl << "Escriba un numero: "; cin >> a;
+			par(a);
+			break;
+		case 3:
+			cout << "ingrese numero: ";
+			cin >> a;
+			b = 1;
+			for (int i = 2; i <= a; i++) {
+				b *= i;
+			}
+			cout << endl << "El factorial de " << a << " es " << facto(a);
+			break;
+		case 4:
+			cout << "ingrese el valor del producto que acaba de comprar: " << endl;
+			cin >> a;
+			cout << "El impuesto IVA de " << a << " es: " << IVA(a);
+		case 0:
+			cout << "END";
+			return 0;
+		default:
+			cout << "Error";
+		}
+
+	} while (op != 0);
+	return 0;
+}
+
+int suma(int a, int b) {
+	return a + b;
+}
+
+void par(int a) {
+	if (a % 2 == 0)
+		cout << "es par";
+
+	else cout << "es impar";
+}
+
+int facto(int a) {
+	b = 1;
+	for (int i = 2; i <= a; i++) {
+		b *= i;
+	}
+	return b;
+}
+
+double IVA(int a) {
+	double c;
+	c = a * (13/100);
+	return c;
+}
