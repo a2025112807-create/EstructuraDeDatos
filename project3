@@ -28,20 +28,16 @@ int main() {
 			cin >> a;
 			cout << "ingrese el sugundo valor: " << endl;
 			cin >> b;
-			suma(a, b);
+			cout<<"la suma es: " << suma(a, b) ;
 			break;
 		case 2:
 			cout << endl << "numero pares";
 			cout << endl << "Escriba un numero: "; cin >> a;
-			par(a);
+			cout << "el numero " << a << " es: " << par(a);
 			break;
 		case 3:
 			cout << "ingrese numero: ";
 			cin >> a;
-			b = 1;
-			for (int i = 2; i <= a; i++) {
-				b *= i;
-			}
 			cout << endl << "El factorial de " << a << " es " << facto(a);
 			break;
 		case 4:
