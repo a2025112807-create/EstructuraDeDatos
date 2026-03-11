@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Saludo {
+private:
+    string mensaje = "Hola mudo";
+
+public:
+    void mostrar();
+};
+
+void Saludo::mostrar() {
+    cout << "Hola mundo";
+}
+
+int main()
+{
+    saludo s1;
+    s1.mostrar();
+}
+
