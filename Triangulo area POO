@@ -1,0 +1,43 @@
+// main
+
+#include <iostream>
+#include "Triangulo.h" 
+
+using namespace std;
+
+int main() {
+	float base, altura;
+	Triangulo Area;
+	cout << "ingresar base: ";
+	cin >> base;
+	cout << "ingresar altura: ";
+	cin >> altura;
+	cout << "El area es: " << Area.calcularArea(base, altura);
+	return 0;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Triangulo.h
+
+class Triangulo
+{
+	private:
+		float base;
+		float altura;
+	public:
+		Triangulo();
+		~Triangulo();
+		float calcularArea(float b, float h);
+};
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//triangulo.cpp
+
+#include "Triangulo.h"
+Triangulo::Triangulo() {
+
+}
+Triangulo::~Triangulo() {
+
+}
+float Triangulo::calcularArea(float b, float h) {
+	return (b * h) / 2;
+}
